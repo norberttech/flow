@@ -65,9 +65,9 @@ jobs:
           gpg
           --batch
           --yes
-          --local-user ${{ env.GPG_USER_EMAIL }}
-          --passphrase ${{ secrets.GPG_PASSPHRASE }}
-          --pinentry-mode loopback
+          --local-user="${{ secrets.GPG_USER_EMAIL }}"
+          --passphrase="${{ secrets.GPG_PASSPHRASE }}"
+          --pinentry-mode="loopback"
           --detach-sign
           --output ./build/flow-php.phar.asc
           ./build/flow-php.phar
