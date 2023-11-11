@@ -93,7 +93,7 @@ jobs:
           tags: |
             ghcr.io/norberttech/flow:${{ github.ref_name }}
             ghcr.io/norberttech/flow:latest
-          target: runtime-cli
+          target: flow
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
