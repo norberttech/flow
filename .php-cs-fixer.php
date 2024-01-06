@@ -31,32 +31,10 @@ return (new Config())
     ->setRules([
         '@Symfony' => true,
         '@Symfony:risky' => true,
-        'blank_line_after_opening_tag' => false,
-        'blank_line_before_statement' => [
-            'statements' => [
-                'break',
-                'continue',
-                'declare',
-                'default',
-                'do',
-                'exit',
-                'for',
-                'foreach',
-                'goto',
-                'if',
-                'include',
-                'include_once',
-                'require',
-                'require_once',
-                'return',
-                'switch',
-                'throw',
-                'try',
-                'while',
-            ],
-        ],
+        'blank_line_after_opening_tag' => true,
+        'blank_line_before_statement' => true,
         'blank_line_between_import_groups' => false,
-        'blank_lines_before_namespace' => false,
+        'blank_lines_before_namespace' => true,
         'class_attributes_separation' => ['elements' => ['const' => 'one', 'method' => 'one', 'property' => 'one']],
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
@@ -138,5 +116,9 @@ return (new Config())
         'ternary_to_null_coalescing' => true,
         'yoda_style' => false,
         'void_return' => true,
+        'fully_qualified_strict_types' => [
+            'leading_backslash_in_global_namespace' => true,
+            'import_symbols' => false
+        ]
     ])
     ->setFinder($finder);

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 use function Flow\ETL\Adapter\CSV\from_csv;
 use function Flow\ETL\Adapter\JSON\to_json;

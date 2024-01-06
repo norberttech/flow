@@ -11,7 +11,7 @@ return new class implements Extractor {
 
     private static array $countries = ['us', 'pl', 'gb', 'fr', 'de', 'it'];
 
-    public function extract(FlowContext $context) : Generator
+    public function extract(FlowContext $context) : \Generator
     {
         $rows = [];
 
@@ -21,8 +21,8 @@ return new class implements Extractor {
                 'name' => 'Name',
                 'last name' => 'Last Name',
                 'phone' => '123 123 123',
-                't_shirt_color' => self::$colors[\array_rand(self::$colors)],
-                'country_code' => self::$countries[\array_rand(self::$countries)],
+                't_shirt_color' => \self::$colors[\array_rand(\self::$colors)],
+                'country_code' => \self::$countries[\array_rand(\self::$countries)],
             ];
 
             if (\count($rows) >= 100_000) {

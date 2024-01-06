@@ -1,17 +1,20 @@
-<?php declare(strict_types=1);
+<?php
 
+declare(strict_types=1);
+
+use function Flow\ETL\Adapter\Avro\to_avro;
+use function Flow\ETL\Adapter\CSV\to_csv;
+use function Flow\ETL\Adapter\Json\to_json;
+use function Flow\ETL\Adapter\Parquet\to_parquet;
 use function Flow\ETL\DSL\from_array;
 use function Flow\ETL\DSL\ref;
-use function Flow\ETL\DSL\to_avro;
-use function Flow\ETL\DSL\to_csv;
-use function Flow\ETL\DSL\to_json;
-use function Flow\ETL\DSL\to_parquet;
+use Faker\Factory;
 use Flow\ETL\Filesystem\SaveMode;
 use Flow\ETL\Flow;
 
 include __DIR__ . '/../../vendor/autoload.php';
 
-$faker = Faker\Factory::create();
+$faker = Factory::create();
 $orders = \array_map(
     static fn (int $i) : array => [
         'order_id' => $faker->uuid,

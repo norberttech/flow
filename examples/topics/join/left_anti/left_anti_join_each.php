@@ -21,7 +21,7 @@ use Flow\ETL\Rows;
 require __DIR__ . '/../../../bootstrap.php';
 
 $apiExtractor = new class implements Extractor {
-    public function extract(FlowContext $context) : Generator
+    public function extract(FlowContext $context) : \Generator
     {
         yield new Rows(
             Row::create(int_entry('id', 1), str_entry('sku', 'PRODUCT01')),

@@ -1,8 +1,10 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Flow\ETL\Adapter\Avro\Tests\Benchmark;
 
-use function Flow\ETL\DSL\Adapter\Avro\from_avro;
+use function Flow\ETL\Adapter\Avro\from_avro;
 use Flow\ETL\Config;
 use Flow\ETL\FlowContext;
 use PhpBench\Attributes\Groups;

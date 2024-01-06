@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\DSL\Adapter\Avro;
+namespace Flow\ETL\Adapter\Avro;
 
 use function Flow\ETL\DSL\from_all;
 use Flow\ETL\Adapter\Avro\FlixTech\AvroExtractor;

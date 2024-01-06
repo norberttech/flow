@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 if ($_ENV['FLOW_PHAR_APP'] ?? false) {
     print "This example cannot be run in PHAR, please use CLI approach.\n";

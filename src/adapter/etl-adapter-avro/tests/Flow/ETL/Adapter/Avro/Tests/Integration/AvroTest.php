@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Adapter\Avro\Tests\Integration;
 
-use function Flow\ETL\DSL\Adapter\Avro\from_avro;
-use function Flow\ETL\DSL\Adapter\Avro\to_avro;
+use function Flow\ETL\Adapter\Avro\from_avro;
+use function Flow\ETL\Adapter\Avro\to_avro;
 use function Flow\ETL\DSL\bool_entry;
 use function Flow\ETL\DSL\datetime_entry;
 use function Flow\ETL\DSL\df;
