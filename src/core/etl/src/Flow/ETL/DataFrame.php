@@ -501,8 +501,6 @@ final class DataFrame
 
     /**
      * @lazy
-     *
-     * @psalm-param string|Join $type
      */
     public function join(self $dataFrame, Expression $on, string|Join $type = Join::left) : self
     {
@@ -517,8 +515,6 @@ final class DataFrame
 
     /**
      * @lazy
-     *
-     * @psalm-param string|Join $type
      */
     public function joinEach(DataFrameFactory $factory, Expression $on, string|Join $type = Join::left) : self
     {
